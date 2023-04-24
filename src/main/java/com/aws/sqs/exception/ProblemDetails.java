@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class ProblemDetails extends Throwable{
+public class ProblemDetails extends Throwable {
     private int status;
     private String message;
     private String description;

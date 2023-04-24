@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 @SpringBootApplication
 @ConfigurationPropertiesScan
 public class AwsSqsApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(AwsSqsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AwsSqsApplication.class, args);
+    }
 }
