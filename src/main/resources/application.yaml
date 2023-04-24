@@ -1,0 +1,18 @@
+cloud:
+  aws:
+    region:
+      static: us-east-1
+      auto: false
+    credentials:
+      secret-key: QgyF0vu6HS3x5qeiK/CEbccCMr/0NDtHfSXxZ2pe
+      access-key: AKIA26WVJSXI4QCBCM2N
+    stack:
+      auto: false
+    end-point:
+      uri: https://sqs.us-east-1.amazonaws.com/753140340177/jagadheesh-queue
+
+elasticmq:
+  scheme: http
+  host: localhost
+  path:
+  port: 9324
