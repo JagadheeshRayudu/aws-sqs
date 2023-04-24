@@ -25,12 +25,8 @@ import java.util.List;
 public class SqsConfig {
     @Autowired
     LocalServiceUri elasticMqLocalSqsUri;
-
-    @Value("${cloud.aws.credentials.access-key}")
-    private String accessKey;
-
-    @Value("${cloud.aws.credentials.secret-key}")
-    private String secretKey;
+    @Autowired
+    AWSCredentials awsCredentials;
     @Autowired
     private Environment env;
 
@@ -57,7 +53,7 @@ public class SqsConfig {
     private AmazonSQSAsync buildAmazonSQSAsync() {
         return AmazonSQSAsyncClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(
-                        new BasicAWSCredentials(accessKey, secretKey)
+                        new BasicAWSCredentials(awsCredentials.getAccessKey(), awsCredentials.getSecretKey())
                 ))
                 .withRegion(Regions.US_EAST_1)
                 .build();
